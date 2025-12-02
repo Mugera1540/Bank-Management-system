@@ -243,7 +243,7 @@ try {
     conn conn1=new conn();
     String q="insert into signup values('"+formno+"','"+name+"','"+Fname+"','"+dob+"','"+gender+"','"+email+"','"+martial+"','"+address+"','"+city+"','"+pincode+"','"+state+"')";
      conn1.statement.executeUpdate(q);
-     new Signup2();
+     new Signup2(first);
      setVisible(false);
   }
   
