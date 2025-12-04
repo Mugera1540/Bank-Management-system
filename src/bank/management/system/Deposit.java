@@ -6,7 +6,8 @@ import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 //import java.security.Timestamp;
-import java.sql.Timestamp;
+// import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.swing.*;;
 
@@ -20,7 +21,7 @@ public class Deposit extends JFrame  implements ActionListener{
          this.pin=pin;
          
          ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icon/atm2.png"));
-         Image i2=i1.getImage().getScaledInstance(1550, 839, Image.SCALE_DEFAULT);
+         Image i2=i1.getImage().getScaledInstance(1550, 830, Image.SCALE_DEFAULT);
          ImageIcon i3=new ImageIcon(i2);
          JLabel l3=new JLabel(i3);
          l3.setBounds(0,0,1550,830);
@@ -69,8 +70,8 @@ public class Deposit extends JFrame  implements ActionListener{
 public void actionPerformed(ActionEvent e) {
    try{
     String amount=textField.getText();
-   // Date date=new Date(System.currentTimeMillis());
-    Timestamp date=new Timestamp(System.currentTimeMillis());
+    Date date=new Date();
+   // Timestamp date=new Timestamp(System.currentTimeMillis());
     if(e.getSource()==b1){
         if(textField.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Please enter the Amount");
@@ -80,11 +81,12 @@ public void actionPerformed(ActionEvent e) {
             c.statement.executeUpdate("insert into bank values('"+pin+"','"+date+"','Deposit','"+amount+"')");
             JOptionPane.showMessageDialog(null, "Rs: "+amount+" Deposit Suceesfully");
             setVisible(false);
+            new main_Class(pin);
         }
     }
     else if(e.getSource()==b2){
         setVisible(false);
-
+        new main_Class(pin);  // return to main pag e
     }
     }
 catch(Exception E){

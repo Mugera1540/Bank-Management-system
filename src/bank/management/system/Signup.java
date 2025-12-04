@@ -203,59 +203,51 @@ public class Signup extends JFrame implements ActionListener {
 
   @Override
   public void actionPerformed(ActionEvent e) { // insert after next buton
-    
-    String formno=first;
-    String name= textname.getText();
-    String Fname=textFname.getText();
-    String dob=((JTextField)dateChooser.getDateEditor().getUiComponent()).getText();
-    String gender=null;
-    if(r1.isSelected()){
-      gender="Male";
+
+    String formno = first;
+    String name = textname.getText();
+    String Fname = textFname.getText();
+    String dob = ((JTextField) dateChooser.getDateEditor().getUiComponent()).getText();
+    String gender = null;
+    if (r1.isSelected()) {
+      gender = "Male";
+
+    } else if (r2.isSelected()) {
+      gender = "Female";
 
     }
-    else if(r2.isSelected()){
-      gender="Female";
 
+    String email = textEmail.getText();
+    String martial = null;
+    if (M1.isSelected()) {
+      martial = "Married";
+    } else if (M2.isSelected()) {
+      martial = "Unmarried";
+    } else if (M3.isSelected()) {
+      martial = "others";
     }
 
-    String email=textEmail.getText();
-    String martial=null;
-    if(M1.isSelected()){
-      martial="Married";
-    }
-    else if(M2.isSelected()){
-      martial="Unmarried";
-    }
-    else if(M3.isSelected()){
-      martial="others";
-    }
-    
     String address = textADD.getText();
-     String city = textCITY.getText();
- String pincode = textPIN.getText();
-String state=textST.getText();
+    String city = textCITY.getText();
+    String pincode = textPIN.getText();
+    String state = textST.getText();
 
-try {
-  if(textname.getText().equals("")){
-    JOptionPane.showMessageDialog(null,"Fill all the fields");
-  }
-  else{
-    conn conn1=new conn();
-    String q="insert into signup values('"+formno+"','"+name+"','"+Fname+"','"+dob+"','"+gender+"','"+email+"','"+martial+"','"+address+"','"+city+"','"+pincode+"','"+state+"')";
-     conn1.statement.executeUpdate(q);
-     new Signup2(first);
-     setVisible(false);
-  }
-  
-} catch (Exception E) {
-  E.printStackTrace();
-}
+    try {
+      if (textname.getText().equals("")) {
+        JOptionPane.showMessageDialog(null, "Fill all the fields");
+      } else {
+        conn conn1 = new conn();
+        String q = "insert into signup values('" + formno + "','" + name + "','" + Fname + "','" + dob + "','" + gender
+            + "','" + email + "','" + martial + "','" + address + "','" + city + "','" + pincode + "','" + state + "')";
+        conn1.statement.executeUpdate(q);
+        new Signup2(first);
+        setVisible(false);
+      }
 
+    } catch (Exception E) {
+      E.printStackTrace();
+    }
 
-    
-
-
-    
   }
 
   public static void main(String[] args) {
