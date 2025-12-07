@@ -28,11 +28,11 @@ public class Fastcash extends JFrame  implements ActionListener {
          l3.setBounds(0,0,1550,830);
          add(l3);
 
-         JLabel label=new JLabel("Please Select The Amount");    
-    label.setBounds(445,180,700,35);
-    label.setForeground(Color.WHITE);
-    label.setFont(new Font("System",Font.BOLD,23));
-    l3.add(label);
+         JLabel label1=new JLabel("Please Select The Amount");    
+    label1.setBounds(445,180,700,35);
+    label1.setForeground(Color.WHITE);
+    label1.setFont(new Font("System",Font.BOLD,23));
+    l3.add(label1);
 
      b1=new JButton("100"); //
      b1.setForeground(Color.WHITE);
@@ -115,7 +115,8 @@ public class Fastcash extends JFrame  implements ActionListener {
                     }else{
                          balance-=Integer.parseInt(resultSet.getString("amount"));
                     }
-                }String num="17";
+                }
+                //String num="17";
                 
                 if(e.getSource()!= b7 && balance<Integer.parseInt(amount)){
                     JOptionPane.showMessageDialog(null, "Insufficient Balance");
