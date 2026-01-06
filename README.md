@@ -56,11 +56,11 @@ Large, readable fonts for accessibility
 Responsive button layouts
 Transaction confirmation dialogs
 
- Technology Stack
-Technology	Purpose	Version
-Java	Core application logic	8+
-Swing (JFrame)	Desktop GUI framework	Built-in
-AWT	Additional UI components (Color, Font, Image)	Built-in
-MySQL	Database management	5.7+
-JDBC	Database connectivity	Built-in
-ClassLoader	Dynamic resource loading	Built-in
+✅  Technology Stack
+
+✅ Java	Core  logic	8+
+✅ Swing (JFrame)	Desktop GUI framework	Built-in
+✅ AWT	Additional UI components (Color, Font, Image)	Built-in
+✅ MySQL	Database management	5.7+
+✅ JDBC	Database connectivity	Built-in
+✅ ClassLoader	Dynamic resource loading	Built-in
