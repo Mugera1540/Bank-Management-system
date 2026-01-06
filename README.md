@@ -1,7 +1,8 @@
-Overview
-The Bank Management System is a desktop ATM application that replicates real-world banking operations. It provides users with a complete banking experience including account management, secure transactions, and balance inquiries through an intuitive graphical user interface.
+✅ Overview
+The Bank Management System is a desktop ATM application that replicates real-world banking operations. It provides users with a complete banking experience including account management, 
+secure transactions, and balance inquiries through an intuitive graphical user interface.
 
-Purpose
+✅ Purpose
 Demonstrate proficiency in Java Swing (JFrame) GUI development
 
 Implement Object-Oriented Programming (OOP) principles
