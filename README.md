@@ -13,31 +13,23 @@ Purpose
 
 ✨ Features
 User Features
+
 ✅ User Login & Authentication
 Card number and PIN verification
-
 Secure database query validation
-
 User-friendly error messages
 
 ✅ Account Operations
 DEPOSIT - Add funds to account
-
 CASH WITHDRAWAL - Withdraw specific amount with balance validation
-
 FAST CASH - Quick withdrawal with preset amounts
-
 BALANCE ENQUIRY - View current account balance
-
 MINI STATEMENT - View recent transaction history
 
 ✅ Security Features
 PIN CHANGE - Update PIN securely
-
 PIN-based authentication
-
 Session management
-
 Card number validation
 
 Admin Features
@@ -56,14 +48,10 @@ UI/UX Features
 
 🛠️ Technology Stack
 Java - Core application logic (Version 8+)
-
 Swing (JFrame) - Desktop GUI framework (Built-in)
-
 AWT - Additional UI components (Color, Font, Image) (Built-in)
-
 MySQL - Database management (Version 5.7+)
-
 JDBC - Database connectivity (Built-in)
-
 ClassLoader - Dynamic resource loading (Built-in)
+
 
